@@ -76,9 +76,10 @@ jobs:
         #ls $JAR_NAME
         pwd && ls
         ls ./eladmin-system/*
+        echo "Runner IPv4: $(curl -s ifconfig.me)"
         #ls target/*
         # 上传 jar 包
-        scp -r $JAR_NAME $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/
+        #scp -r $JAR_NAME $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/
 
         # 可选：重启服务（例如Spring Boot）
         #ssh $REMOTE_USER@$REMOTE_HOST "cd $REMOTE_DIR && ls -al && echo 'Deploy completed!'"
